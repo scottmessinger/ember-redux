@@ -15,8 +15,8 @@ There's many reasons why you might want to do this:
 ```js
 //app/services/todos.js
 export default Ember.Service.extend({
-  redux: inject.service('redux'),
-  channels: inject.service('channels'),
+  redux: Ember.inject.service(),
+  channels: Ember.inject.service(),
 
   add(name) {
     let {redux, channels} = this.getProperties('redux', 'channels');
