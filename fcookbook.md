@@ -12,8 +12,8 @@ There's many reasons why you might want to do this:
 2. You want access to other services within the ember container
 3. You want a service to keep a long lived reference, e.g. to a channel on a websocket
 
-```
-// app/services/todos.js
+```js
+//app/services/todos.js
 export default Ember.Service.extend({
   redux: inject.service('redux'),
   channels: inject.service('channels'),
@@ -29,7 +29,8 @@ export default Ember.Service.extend({
 });
 ```
 
-``` app/components/todos-list.js
+```js
+//app/components/todos-list.js
 export default Ember.Component.extend({
   todos: Ember.inject.service(),
 
