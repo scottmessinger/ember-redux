@@ -7,10 +7,7 @@ categories: docs
 To install ember-redux
 
 ```
-npm install ember-browserify -D
-npm install redux@3 -D
-npm install redux-thunk@2 -D
-npm install ember-redux -D
+ember install ember-redux
 ```
 
 To better understand ember-redux we first need to break down the essential concepts in redux itself. Because redux revolves around a central store we first need to create it using the `createStore` function.
