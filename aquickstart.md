@@ -57,3 +57,7 @@ export default connect(stateToComputed, dispatchToActions)(NumbersComponent);
 ```
 
 And finally you will notice we use a new helper called `connect` to return a new component given the 2 functions that map the computed and actions.
+
+<div class="notice">
+  <p>Next try this <a href="https://ember-twiddle.com/7ce3446b14f166f04064eba663c0a350">example</a> in your web browser with ember-twiddle! Then continue reading about how to apply <a href="/ddau">data down/ actions up</a> with ember-redux!</p>
+</div>

@@ -60,6 +60,17 @@ tbody tr:nth-child(odd) {
   background: #eee;
 }
 
+.notice p:first-child:before{
+position:absolute;top:2px;color:#fff;font-family:FontAwesome;content:'\f059';left:10px}div.notices p:first-child:after{position:absolute;top:2px;color:#fff;left:2rem}
+.notice {
+  border-top: 30px solid #6AB0DE;
+  background: #E7F2FA;
+  padding: 15px;
+  padding-bottom: 12px;
+  font-size: 1rem;
+  color: #666;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",

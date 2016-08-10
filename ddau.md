@@ -201,6 +201,10 @@ The full ember application for this example is available on [github][]
 
 > "prefer duplication over the wrong abstraction"
 
+<div class="notice">
+  <p>Next learn about the different extension points by reading the <a href="/configure">configuration</a> documentation!</p>
+</div>
+
 [Dan Abramov]: https://twitter.com/dan_abramov
 [blog]: https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
 [react-redux]: http://redux.js.org/docs/basics/UsageWithReact.html
