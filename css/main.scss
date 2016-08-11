@@ -60,16 +60,11 @@ tbody tr:nth-child(odd) {
   background: #eee;
 }
 
-.notice p:first-child:before{
-position:absolute;top:2px;color:#fff;font-family:FontAwesome;content:'\f059';left:10px}div.notices p:first-child:after{position:absolute;top:2px;color:#fff;left:2rem}
-.notice {
-  border-top: 30px solid #6AB0DE;
-  background: #E7F2FA;
-  padding: 15px;
-  padding-bottom: 12px;
-  font-size: 1rem;
-  color: #666;
-}
+div.notices{margin:2rem 0;position:relative}
+div.notices p{padding:15px;display:block;font-size:1rem;margin-top:0rem;margin-bottom:0rem;color:#666}
+div.notices p:first-child:before{position:absolute;top:3px;color:#fff;font-family:FontAwesome;content:'\f059';left:10px}
+div.notices p:first-child:after{position:absolute;top:3px;color:#fff;left:2rem;}
+div.notices.note p{border-top:30px solid #6AB0DE;background:#E7F2FA}div.notices.note p:first-child:after{content:'What should I do now?'}div.notices.tip p{border-top:30px solid rgba(92,184,92,.8);background:#E6F9E6}div.notices.tip p:first-child:after{content:'Tip'}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

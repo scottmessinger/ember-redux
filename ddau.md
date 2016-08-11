@@ -201,7 +201,7 @@ The full ember application for this example is available on [github][]
 
 > "prefer duplication over the wrong abstraction"
 
-<div class="notice">
+<div class="notices note">
   <p>Next learn about the different extension points by reading the <a href="/configure">configuration</a> documentation!</p>
 </div>
 
