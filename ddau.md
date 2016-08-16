@@ -48,7 +48,6 @@ With the route in place we now need to fire an async network request to fetch th
 
 ```js
 //app/users/route.js
-import Ember from 'ember';
 import route from 'ember-redux/route';
 import ajax from 'example/utilities/ajax';
 
@@ -56,9 +55,7 @@ var model = (dispatch) => {
     return ajax('/api/users', 'GET').then(response => dispatch({type: 'DESERIALIZE_USERS', response: response}));
 };
 
-var UsersRoute = Ember.Route.extend();
-
-export default route({model})(UsersRoute);
+export default route({model})();
 ```
 
 The end result is the same as anything you've done in ember previously but you no doubt noticed that the model hook is now a function we pass into the `route` function from ember-redux. This pattern isn't a hard requirement so if you prefer [idiomatic][] ember you can always inject the redux service and use dispatch directly.
