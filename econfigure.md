@@ -43,6 +43,27 @@ var warnz = function({dispatch, getState}) {
 export default [resolved, warnz];
 ```
 
+If the middleware you are using requires some additional setup after the store is created, like redux-saga you can export a setup function that will be run for you.
+
+```js
+//app/middleware/index.js
+import createSagaMiddleWare from 'npm:redux-saga';
+import addAsync from '../sagas/counter';
+
+const createSaga = createSagaMiddleWare.default ? createSagaMiddleWare.default : createSagaMiddleWare;
+
+const sagaMiddleware = createSaga();
+
+const setup = () => {
+    sagaMiddleware.run(addAsync);
+};
+
+export default {
+    middleware: [sagaMiddleware],
+    setup: setup
+};
+```
+
 **Reducers**
 
 In redux [reducers][] take the current state along with some action and return a new state. One reducer unique to `ember-redux` is named `optional.js` and it only exists because at the time I wanted a reducer that could run before any other. The original reason I wrote this was that I didn't know enhancers existed and I didn't truly understand how middleware worked. It may not be as useful to some people but here is one example where I used it to audit my actions (like you might do with middleware).
